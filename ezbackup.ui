@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EZBackup</class>
+ <widget class="QMainWindow" name="EZBackup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>463</width>
+    <height>328</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EZBackup</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="BTN_SRC">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_DST">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_SRC">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>361</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Source Folder</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_DST">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>361</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Destination Folder</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="TAB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>441</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="TAB_SETTING">
+     <attribute name="title">
+      <string>Settings</string>
+     </attribute>
+     <widget class="QGroupBox" name="GRB_PASS">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>131</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Password</string>
+      </property>
+      <widget class="QCheckBox" name="CHK_PASS">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>91</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Use Encryption</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="TXT_PASS_1">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="TXT_PASS_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="LBL_INFO_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter password twice:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="GRB_ZIP">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>131</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Type and Compression</string>
+      </property>
+      <widget class="QComboBox" name="CMB_COMPRESS">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="CMB_ZIP_TYPE">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="LBL_INFO_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Zip file type:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="LBL_INFO_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Compresion rate:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="GRB_FILE_TYPE">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>10</y>
+        <width>131</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>File Types</string>
+      </property>
+      <widget class="QListWidget" name="LST_FILE_TYPE">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>111</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="TXT_FILE_TYPE">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>*.</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="BTN_FILE_TYPE_ADD">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>41</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="GPB_thumbnail">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>130</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Image Backup</string>
+      </property>
+      <widget class="QCheckBox" name="CHK_IMG_BCKUP">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Create thumbnail</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="BTN_IMG_BCKUP">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>40</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="CMB_IMG_BCKUP">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="GPB_compressor">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>271</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Compressor Engine</string>
+      </property>
+      <widget class="QPushButton" name="BTN_SEL_7ZIP">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>22</y>
+         <width>31</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="LBL_SEL_7ZIP">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>211</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select 7Zip.exe as the compresor</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TAB_STAT">
+     <attribute name="title">
+      <string>Status</string>
+     </attribute>
+     <widget class="QListWidget" name="LST_STAT">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>411</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="PGRS_BAR">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>231</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="CHK_LST_CLR">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>170</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear every
+ 100 entries</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BTN_SAVE_REPORT">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>180</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save Report</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TAB_ABOUT">
+     <attribute name="title">
+      <string>About</string>
+     </attribute>
+     <widget class="QLabel" name="IMG_ABOUT">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>141</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ABOUT IMAGE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LBL_INFO_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>231</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Copyright 2015. All rights reserved.
+Hooshiar Zolfagharnasab
+www.hoppico.com
+hozo19@gmail.com
+
+7Zip plug-in is used as the core of compressor.
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="BTN_BACKUP">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>60</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Back it up!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_CANCEL">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>60</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>463</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>BTN_SRC</tabstop>
+  <tabstop>BTN_DST</tabstop>
+  <tabstop>TAB</tabstop>
+  <tabstop>CHK_PASS</tabstop>
+  <tabstop>TXT_PASS_2</tabstop>
+  <tabstop>TXT_PASS_1</tabstop>
+  <tabstop>CMB_ZIP_TYPE</tabstop>
+  <tabstop>CMB_COMPRESS</tabstop>
+  <tabstop>TXT_FILE_TYPE</tabstop>
+  <tabstop>BTN_FILE_TYPE_ADD</tabstop>
+  <tabstop>LST_FILE_TYPE</tabstop>
+  <tabstop>CHK_IMG_BCKUP</tabstop>
+  <tabstop>BTN_SEL_7ZIP</tabstop>
+  <tabstop>BTN_BACKUP</tabstop>
+  <tabstop>LST_STAT</tabstop>
+  <tabstop>BTN_SAVE_REPORT</tabstop>
+  <tabstop>CHK_LST_CLR</tabstop>
+  <tabstop>BTN_CANCEL</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
