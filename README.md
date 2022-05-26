@@ -1,7 +1,5 @@
-# IndipArchZip
+# EZBackup
 ## Generate Archives of individual files in a directory (parent and subs)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Briefly, this tool compresses individual files in a set of directories and sub-directories. You can define your own password, the level of compression, and the filetypes to zip.
 
